@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>rkan = Rodney Kan = Chia-Chao Kan</h1>
+<h1>rkan / Rodney Kan</h1>
 
-<p>my utimate goal:</p>
+<p>my goal:</p>
 Realize and change the world in software's way
 
 <p>contributed repositories:</p>
