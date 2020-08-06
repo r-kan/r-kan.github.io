@@ -22,21 +22,26 @@ its_right@msn.com
 </ul>
 
 <ul>
-<u>NIFR: <b>N</b>ext-dacade <b>I</b>nvestment <b>F</b>ramework <b>R</b>econstruction</u>
+<u>NIFR: <b>N</b>ext-dacade <b>I</b>nvestment <b>F</b>ramework <b>R</b>econstruction</u><br>
+  --- Crawl/Analyze/Visualize data/strategies/portfolio on 2000+ stocks in Taiwan stock market<br>
   <ul>
-  <li type='square'>Web user interface<br>
-  <li type='square'>Smarter crawler & scheduler<br>
-  <li type='square'>Clearer error handling<br>
-  <li type='square'>More modulated strategy<br>
+  <li type='square'>Data collecting<br>
+    <ul><li type='circle'><a href='https://scrapy.org/'>Scrapy</a> to crawl daily market data</ul>
+    <ul><li type='circle'>On-the-fly validation use rule.json file (before flushing into DB)</ul>
+    <ul><li type='circle'><a href='https://www.sqlite.org/index.html'>SQL (sqlite3)</a> as a data store</ul>
+    <ul><li type='circle'><a href='https://www.mongodb.com/'>NoSQL (mongoDB)</a> as a 'crawl stats' store</ul>
+  <li type='square'>Data processing<br>
+    <ul><li type='circle'>Technical indexes computation</ul>
+    <ul><li type='circle'>Portfolio generation: combination of different strategies (buy/filter/sell)</ul>
+    <ul><li type='circle'><a href='https://cran.r-project.org/web/packages/PerformanceAnalytics/index.html'>PerformanceAnalytics(R)</a> to compute performance metrics among strategies
+      <ul><li>Returns/DrawDowns(dd)/ldd/recovery/SharpeRatio/...</ul>
+    </ul>
+  <li type='square'>Data visualization<br>
+    <ul><li type='circle'><a href='https://www.meteor.com/'>Meteor(React+node+mongoDB)</a>/<a href='https://redux.js.org'>redux</a>/<a href='https://d3js.org/'>d3.js</a>/<a href='https://semantic-ui.com/'>SemanticUI</a> for visualization
+      <ul><li>Tables/Line charts/Histograms/Scatter charts/Box charts/...</ul>
+    </ul>
   </ul>
-</ul>
-
-<ul>
-<u>A Life Decision/Experience Tracking & Suggestion System</u>
-  <ul>
-  <li type='square'>Users give their daily decision and status/outcome on any events to the system<br>
-  <li type='square'>As feedback, the system gives suggestion, per user's request, to help make his/her life better<br>
-  </ul>
+  --- Next focus: More strategies & add U.S. stocks
 </ul>
 
 <hr>
@@ -45,7 +50,7 @@ its_right@msn.com
 <a href="http://www.taiexnotifier.tw/" target="_blank">A Notifier on Taiwan Stock Market Price Change</a>: A bot program gives push notification on stock prices; available at <a href='https://developers.line.biz/en/'>Line platform</a>
   <ul>
   <li type='square'>Fast: only seconds of delay w.r.t price change
-  <li type='square'>Free: 4000+ friends; thousands of interaction per day
+  <li type='square'>Free: 5000+ friends; thousands of interaction per day
   <li type='square'>Easy to use: well designed bot interface/commands; clear <a href='https://developers.line.biz/en/docs/messaging-api/using-flex-messages/'>Line flexmsg</a>
   </ul>
 </ul>
@@ -73,6 +78,7 @@ its_right@msn.com
 <hr>
 <h3>Previous Projects</h3>
 <ul>
+--- Note: rather old tech. compare to newer same kind project NIFR<br>
 <a href="https://r-kan.github.io/opWin" target="_blank">opWin</a>: Taiwan stock market quantitative model building/evaluation, which includes
   <ul>
   <li type='square'>Unified market data retrieval engine by <a href="https://www.python.org" target="_blank"><i>python</i></a><br>
