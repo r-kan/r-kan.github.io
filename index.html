@@ -16,32 +16,59 @@ its_right@msn.com
 <ul>
 <u>RIA: <b>R</b>etrieve <b>I</b>nformation <b>A</b>utonomy</u>
   <ul>
-  <li type='square'>Website give user full power decide which content he/she would like to see (or not to see)<br>
-  <li type='square'>memePtt, a website promoting RIA, w.r.t the PTT BBS system, is undergoing<br>
+  <li type='square'>Web-app that gives viewer full power to decide which content to see (or more important, not to see)<br>
+  <li type='square'>Integrate with data techinique to facilitate information extraction<br>
+  </ul>
+</ul>
+
+<ul>
+<u>W-TNF: <b>W</b>eb-version <b>T</b>aiex<b>N</b>oti<b>F</b>ier</u>
+  <ul>
+  <li type='square'>Web-app that gives same feature (and possibly more) as the <a href='http://www.taiexnotifier.tw/'>line-version</a><br>
+    <ul><li type='circle'>1st phase: Mobile-first webpage by RWD</ul>
+    <ul><li type='circle'>2nd phase: App-version (adopt React Native?)</ul>
   </ul>
 </ul>
 
 <ul>
 <u>NIFR: <b>N</b>ext-dacade <b>I</b>nvestment <b>F</b>ramework <b>R</b>econstruction</u><br>
-  --- Crawl/Analyze/Visualize data/strategies/portfolio on 2000+ stocks from Taiwan stock market since 2005<br>
+  Crawl / Analyze / Visualize data / strategies / portfolio on 2000+ stocks from Taiwan stock market since 2005<br>
   <ul>
   <li type='square'>Data collecting<br>
-    <ul><li type='circle'><a href='https://scrapy.org/'>Scrapy</a> to crawl daily market data</ul>
-    <ul><li type='circle'>On-the-fly validation use rule.json file (before flushing into DB)</ul>
-    <ul><li type='circle'><a href='https://www.sqlite.org/index.html'>SQL (sqlite3)</a> as a data store</ul>
-    <ul><li type='circle'><a href='https://www.mongodb.com/'>NoSQL (mongoDB)</a> as a 'crawl stats' store</ul>
+    <ul><li type='circle'><a href='https://scrapy.org/'>Scrapy</a> to crawl daily market data with on-the-fly validation</ul>
+    <ul><li type='circle'><a href='https://www.sqlite.org/index.html'>SQL (sqlite3)</a> as a standard data store</ul>
+    <ul><li type='circle'><a href='https://www.mongodb.com/'>NoSQL (mongoDB)</a> as an additional store</ul>
   <li type='square'>Data processing<br>
     <ul><li type='circle'>Technical indexes computation</ul>
-    <ul><li type='circle'>Portfolio generation: combination of different strategies (buy/filter/sell)</ul>
-    <ul><li type='circle'><a href='https://cran.r-project.org/web/packages/PerformanceAnalytics/index.html'>PerformanceAnalytics(R)</a> to compute performance metrics among strategies
-      <ul><li>Returns/DrawDowns(dd)/ldd/recovery/SharpeRatio/...</ul>
+    <ul><li type='circle'>Portfolio generation: combination of different strategies (#target/buy/filter/sell/aggregations)</ul>
+    <ul><li type='circle'><a href='https://cran.r-project.org/web/packages/PerformanceAnalytics/index.html'>PerformanceAnalytics (R package)</a> to compute performance metrics among strategies
+      <ul><li>Returns / DrawDowns(dd) / ldd / recovery / SharpeRatio/ ...</ul>
     </ul>
   <li type='square'>Data visualization<br>
-    <ul><li type='circle'><a href='https://www.meteor.com/'>Meteor(React+node+mongoDB)</a>/<a href='https://redux.js.org'>redux</a>/<a href='https://d3js.org/'>d3.js</a>/<a href='https://semantic-ui.com/'>SemanticUI</a> for visualization
-      <ul><li>Tables/Line charts/Histograms/Scatter charts/Box charts/...</ul>
+    <ul>
+      <li type='circle'>
+        <a href='https://www.gatsbyjs.com/'>Gatsby</a>
+        /
+        <a href='https://www.apollographql.com/'>Apollo GraphQL</a>
+        /
+        <a href='https://redux.js.org'>redux</a>
+        /
+        <a href='https://d3js.org/'>d3.js</a>
+        /
+        <a href='https://semantic-ui.com/'>SemanticUI</a>
+      <ul><li>Tables / Line charts / Histograms / Scatter charts / Box charts / ..., powered by SSG and GraphQL</ul>
+      <li type='circle'><a href='https://www.meteor.com/'>Meteor</a>: previously adopted framework; phase out due to performance consideration (compared with SSG)
     </ul>
   </ul>
-  --- Next focus: Adopt SSG (Static Site Generator); more strategies; support U.S. stocks
+  Next Focus: Multi-market support e.g., U.S stock market
+</ul>
+
+<hr>
+<h3>Ongoing Learnings</h3>
+<ul>
+  <li type='square'>Responsive Web Design (RWD): <a href='https://www.w3schools.com/w3css/defaulT.asp'>w3.css</a>
+  <li type='square'>JavaScript testing: <a href='https://jestjs.io/'>Jest</a>
+  <li type='square'>Data techinques - theory and implementation: Statistics, <a href="https://www.r-project.org" target="_blank"><i>R</i></a>, <a href="https://scikit-learn.org/stable/" target="_blank"><i>scikit-learn</i></a>, <a href="https://www.elastic.co/" target="_blank"><i>Elasticsearch</i></a><br>
 </ul>
 
 <hr>
@@ -50,7 +77,7 @@ its_right@msn.com
 <a href="http://www.taiexnotifier.tw/" target="_blank">A Notifier on Taiwan Stock Market Price Change</a>: A bot program gives push notification on stock prices; available at <a href='https://developers.line.biz/en/'>Line platform</a>
   <ul>
   <li type='square'>Fast: only seconds of delay w.r.t price change
-  <li type='square'>Free: 5000+ friends; thousands of interaction per day
+  <li type='square'>Free: 6,600+ friends; thousands of interaction per day
   <li type='square'>Easy to use: well designed bot interface/commands; clear <a href='https://developers.line.biz/en/docs/messaging-api/using-flex-messages/'>Line flexmsg</a>
   </ul>
 </ul>
@@ -65,21 +92,12 @@ its_right@msn.com
 <li type='square'><a href="https://github.com/r-kan/iReminder" target="_blank">iReminder</a>: The image reminder; brings you as much as you can imagine<br>
 <li type='square'><a href="https://github.com/sw-craftsmen/web-notifier" target="_blank">web-notifier</a>: A tool notifies web content change/update<br>
   </ul>
-  <hr>
-<h3>Current Interested Topics</h3>
-<ul>
-    <li type='square'>Static Site Generators (SSG) & <a href='https://graphql.org/'>GraphQL</a> - <a href='https://www.gatsbyjs.com/'>Gatsby.js</a>
-    <li type='square'>Javascript Full stack web developing - <a href='https://reactjs.org/'>React</a>, <a href="https://www.meteor.com/">Meteor</a><br>
-<li type='square'>'Big-data' handling - theory and implementation: Statistics, <a href="https://www.r-project.org" target="_blank"><i>R</i></a>, <a href="https://www.mongodb.com/" target="_blank"><i>MongoDB</i></a>, <a href="https://www.postgresql.org/" target="_blank"><i>PostgreSQL</i></a>, <a href="https://www.elastic.co/" target="_blank"><i>Elasticsearch</i></a><br>
-<li type='square'>Web data mining: data crawling/re-organization using <a href="http://scrapy.org" target="_blank"><i>scrapy</i></a>, <a href="http://phantomjs.org" target="_blank"><i>PhantomJS</i></a>, Selenium<br>
-  <li type='square'>Asynchronous programming - mindset & technique: async/await (js & python), <a href="https://docs.python.org/3/library/asyncio.html">asyncio</a>, aioredis (<a href="https://redis.io">Redis</a>)<br>
-  </ul>
 
 
 <hr>
 <h3>Previous Projects</h3>
 <ul>
---- Note: rather old tech. compare to newer same kind project NIFR<br>
+Note: rather old tech. compare to more recent same kind project NIFR<br>
 <a href="https://r-kan.github.io/opWin" target="_blank">opWin</a>: Taiwan stock market quantitative model building/evaluation, which includes
   <ul>
   <li type='square'>Unified market data retrieval engine by <a href="https://www.python.org" target="_blank"><i>python</i></a><br>
@@ -93,3 +111,4 @@ its_right@msn.com
 <h4><i>~ Trust the process of realize and change the world in software way ~</i></h4>
 </body>
 </html>
+
